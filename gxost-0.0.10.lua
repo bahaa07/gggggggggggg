@@ -1806,8 +1806,10 @@ function get_next_map(map)
 			if v.map == map then
 				back = maps[i - 1]
 				next = maps[i + 1]
-	
-			 return {b = back, n = next}
+	
+
+			 return {b = back, n = next}
+
 			end
 		end
 	end
@@ -2049,7 +2051,8 @@ function start()
 		"[💨] No Wind Wall",
 		"[☀️] Collect Waxes",
 		"[✨] Other Hacks",
-		"[⚙️] Settings"
+		"[⚙️] Settings", 
+		"[🔚]END" 
 		-- "!!! {Debug Features}"
 	}, nil, "Choose Hack:")
 
@@ -2374,7 +2377,9 @@ function start()
 			end
 		elseif menu == 12 then
 			settingsmenu()
-		elseif menu == 13 then
+			elseif menu == 13 then
+			os.exit() 
+		elseif menu == 14 then
 			debugmenu = gg.choice({
 				"{Get map}",
 				"{Get map name}",
